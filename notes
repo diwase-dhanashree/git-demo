@@ -1,0 +1,237 @@
+**Git-** Version control system (tool to track changes in code)
+Uses- 1. Track history of code 2. collaborate 3. Manage changes in file 4. Make changes and undo them 5. Check who made changes
+Git is open source and free source control management (SCM).
+Git- Local repo
+
+**Github**- Website that allows developers to store and manage their code using Git. It's a website where developers can upload code, make changes to it or reflect the code there after changes are made in the system.
+Codes are uploaded in the form of folder, called repsitory, in Github.
+Others' codes can also be viewed and we can make changes to their code by making a copy of it.
+GitHub- Remote/ cloud repo
+
+*Issues and pull requests can be tied. if the pull request is approved and commiteed, the issue will be closed automatically.*
+
+**The various tabs on GitHub**
+1) Code : here we can see all the files in our repo
+2) Issues : here we can enter feature requests or maybe someone finds a bug those details can be entered here
+3) Pull requests :  to create pull requests
+4) Actions : run test or write programs to manage repo
+5) Projects : project management view
+6) Wiki : Document your code
+7) Security : to manage policies
+8) Insights : Contributors, issues, pull requests etc is displayed basically a graph.
+9) Settings : config settings for project
+
+**Kanban board** :- A Kanban board is a visual project management tool that helps teams visualize work, manage workflow, and optimize the flow of tasks from initiation to completion. It is based on the principles of Kanban, which is a method for managing knowledge work with an emphasis on just-in-time delivery while not overloading team members.
+
+**README File** - consists details of the project, extension- .md(marked down)
+**COMMIT** - saving changes
+**credential helper** :- stores credentials
+
+**Configuring Git** (in which acc we are making changes like email id, name, etc.)
+Types of configure: global and local
+**GLOBAL**:- All changes are made with same email id (for single acc)
+**LOCAL**:- Making changes in a specific git repo from a diff acc
+
+There are 2 types of files in folder- normal files(visible files) and hidden files(only accessible through terminals).
+
+Cloning of repo is basically done when we need to make changes to the code or view its status.
+But when we need to manage the projects that we started on our machines with git i.e. make the projects first and then show it on git, this is done using **Init commands**
+
+If there is no .git folder in the repo it means it is not a git repo. To make a folder a git repo we use git int command.
+
+There are 3 diff environments in git:
+*Working files* - where editing is done
+*Staging* - adding / before commiting
+*Commit* - Saving all changes
+
+**Push** :- to make changes visible on github
+To push a code from a local repo on git repo we first need to create a new repo on github.
+**Pull Command** :- used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+
+**Pull Request** :- Lets you tell others about changes you have pushed to a branch in a repo on Github.
+When many developers want to merge with main at the same time, pull request is used.
+Github first checks if the code can be automatically merged or not. This is bcz it may happen that the code in main branch in a line and your code in that line are diff this leads to conflicts.
+
+*Pull Request* is for merging branches and *Pull command* is to update local repo to match the content, in other words, show merging of codes in local repo.
+
+**GIT BRANCHES**
+
+**Branch** copies of a project(main project)
+Master and main are two diff branches.
+
+When more than 1 people are working on a project, every person has diff work i.e. seperate branch for seperate feature/work
+
+Using branches developers don't have to wait for each other to finish their work they can jst make a copy of the main branch, workon it/make changes and when the work is done for both developers, they merge it.
+
+**Branches are used for managing different lines of development within a single repository** 
+
+**Submodules are used for including external repositories as part of your project. They serve different purposes and are used in different**
+
+*Merge point* : point at which the branches are merged.
+*Merging 2 branches*: writing same code for both(branches to be merged) branches
+The branch we are currently on cannot be deleted.
+Changes are made in the branch we are currently on and are only visible on that branch and no other branch.
+*Working tree* is a system on git which comprises of branches.
+**Merging Code**
+If we have created any new feature and now we want to merge it with the main branch. There are 2 ways:
+**WAY-1** Throgh git/Command line
+git diff <-branch name-> :- check diffs/to compare commits, branches, files etc.
+git merge <-branch name-> :- to merge 2 branches.
+
+**WAY-2** Using Github
+Create a PR (pull request) 
+If we have made changes in our branch and want to merge those with main branch, the senior developer will review the changes we're trying to make and can comment accordingly and it;s thier decision wheether to merge it or not.
+
+**Merge Conflicts** :- An event that takes place when git is unable to automatically resolve differences in code between two commits.
+When we merge 2 branches and there are changes in same line or file, git doesn't understand which changes to keep.
+
+**Resolving Merge Conflicts** :- git cannot resolve merge conflicts we have to do it manually. When doing this vs code provides options to resolve conflicts
+We can keep changes from both files.
+
+**Undoing Changes** :- 
+CASE 1: Staged changes, added but not committed, *git reset<-file name->*, *git reset*
+
+CASE 2: Committed changes (for one commit) *git reset HEAD~1* 
+All the commits are stored internally in git, the latest commit is named HEAD by default. So, HEAD~1 means take head 1 step back. Basically, we are setting head on previous step/commit.
+
+CASE 3 Committed changes (for many commits) *git rese<-commit hash->*, *git reset --hard <-commit hash->*
+Hash- code for a commit. We copy the hash of the commit where we want to go
+Hash of the commit is can be found using *git log*. The alphanumeric code written after commit word in commit log is hash of that commit.
+
+**Fork** :- A fork is a new repo that shares code and visibility settings with the original "upstream" repo.
+Fork is a rough copy. This is done using the fork button on github.
+Here, commits made are on our account and are not visible to others.
+To make it visible to others or merge it, we create pull request.
+Suppose, we are working on someone else's repo, we can fork it or make a copy of their project on our acc and make changes to the repo. These when committed will only be visible to us unless we create a pull request and merge them.
+
+**Hidden Files** :- Hidden files start with a dot. in git, .git is a default hidden file which makes it a repo. 
+
+**.gitignore** :- To specify intentionally untracked files and directories that git should ignore. It tells git about which files exclude from version control
+You create a .gitignore file in the root of your Git repository, and you list patterns of files or directories that you want Git to ignore. Git then uses this file to determine which files should not be considered when checking for changes or making commits.
+
+**Rebasing** :- modify commit log and change order in which commits apper.
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+**GETTING STARTED WITH GIT**
+
+**STEP 1**:- Installation
+**STEP 2**:- Configuring Git (in which acc we are making changes like email id, name, etc.) **command- git config**
+To keep git and coding process working together we use code editor.
+
+**WORKFLOW (local git)**
+STEP 1: Create github repo
+STEP 2: Clone the repo on your machine
+STEP 3: Make changes
+STEP 4: Add the changes
+STEP 5: Commit/save changes
+STEP 6: Push/ show changes on github
+STEP 7: Click on 'merge PR' button 
+STEP 8: A new commit is added
+STEP 9: Click on confirm merge. Merge is successful.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+//Starting with basic git commands
+
+1) **Clone** :- Cloning a repository on our local machine
+We have 2 repos/locations - remote(github) and local(our PC)
+So, clone command is used to copy a github repo on the sys. To do this the git clone<-URL-> command is used where url is the github project link.
+HTTPS is the easiest way to clone our repo to local machine.
+
+2) **Status** :- Displays the state of code
+There are 4 typpes of status in git: 
+    1) **untracked** : new files that git don't track yet(i.e. git doesn't know about it and if changes are made git doesn't know about it, call it untracked not modified) this when changes are not committed.
+    2) **modified** : changes are made
+    3) **unmodified** : no changes 
+    4) **staged** : file is ready to be committed i.e. file is added but not committed yet. 
+    When the file is committed the status is unmodified.
+
+For git to track the changes, we first need to add them and thne commit. To do this there are two steps add and commit.
+
+3) **Add** :- Track a file, adds new or unchanges file in your working directory to the git staging area. git add <-file name->, here, the file name is any new file or the name of the file in which changes are being made.
+
+4) **Commit** :- saved changes. gti commit -m "msg", here, -m means msg. the "msg" is some meaningful msg; ex.: if we added a new button we can write "add new button". git push origin main, here, origin is the name of remote/github repo and main is the branch.
+
+5) **Push Command** :- Upload local repo content on remote repo. To show the committed changes on github. Simply commiting the changes does not show on github, to do this we use push command. 
+
+6) **Pull Command** :- used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+git pull origin main
+
+7) **Init commands** :- Used to create a new git repo.
+    1) **git init** - To make a repo git repo
+    2) **git remote add origin <-link->** - add new remote(git repo) named origin and its link
+    3) **git remote -v** - to verify remote
+    4) **git branch** - to check branch
+    5) **git branch -M main** - rename a branch
+    6) **git push -u origin main** - -u means set upstream means all the push operations are being made on origin main. It is basically creating a short cut for future use as after this command we can directly write git push to push commits.
+
+8) **Branch Commands** :-
+    1) **git branch** - to check current branch
+    2) **git branch -M main** - rename a branch
+    3) **git checkout <-branch name->** :- to navigate, get out of one branch and enter into another.
+    4) **git checkout -b <-new branch name->** :- to create new branch
+    5) **git branch -d <-branch name->** :- to deldete branch
+    6) **cd** :- Basic terminal command, change directory. We're trying to change directory or enter into some other file/ folder or directory. When we want to enter from main folder to sub folder.
+
+9) **Pull Request (PR)** :- to let others know about the changes you pushed to a branch in a repo on github.
+
+**Steps to create pull request**
+STEP 1: Go to github repo that you want to create PR for
+STEP 2: Click on the 'Compare and pull request' button
+STEP 3: Write a msg to merge
+STEP 4: Click on 'Create PR' button
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+**GIT COMMANDS**
+
+**~** :- denotes root directory or main/primary folder 
+**git --version**:- gives the version of git
+**ls** :- list files, gives all the directories
+**pwd** :- gives the working directory
+**git config** :- to set up accounts
+**git config --list** :- to check what we had set up using git config
+**git clone<-URL->** :- Clone
+**git status** :- Displays state of code
+**cd** :- Change directory
+**cd ..** :- To get out of the directory
+**mkdir** L- Make new Directory, used to make new folder.
+
+**git add file_name** :- Track a file. add file or changes to working directory
+**git add .** :- to add all the changes or files to the working directory
+**git rm --cached <-file name->** :- To untrack a file. or remove a file from stage.
+**git commit -m "msg"** :- commit changes
+**git push origin main** :- To show changes on github.
+**git push -u origin main** :- when working on the same branch
+**git pull origin main** :- show merged content in local repo
+**git init** :- to use git in our project
+**git remote add origin <-link->** - add new remote(git repo) named origin and its link
+**git remote -v** - to verify remote
+
+**git branch** - to check branch
+**git branch -M main** - rename a branch
+**git checkout <-branch name->** :- to navigate
+**git checkout -b <-new branch name->** :- to create new branch
+**git branch -d <-branch name->** :- to deldete branch
+**git switch -c <-branch name->** :- to create a new branch and switch to it
+**git merge branchname** :- to merge changes
+
+**git reset<-file name->** :- undo staged changes
+**git reset** :- undo staged changes
+**git reset HEAD~1** :- undo committed changes for one commit
+**git reset <-commit hash->** :- changes are removed (but not from code)
+**git reset --hard <-commit hash->** :- changes are removed from the code also
+
+**git log** :- gives commit logs
+**git log --oneline** :- gives abbrivated commit logs
+**git log -p** :- to see specific commits
+
+**git config -h** :- gives all the config options
+**git restore --staged <-file name->** :- removes file from the staging phase
+**git commit -a -m "msg"** :- commit without staging
+**git mv <-old file name-> <-new file name>** :- rename a file
+**git commit -m "msg" --amend** :- ammends the msg (changes can be seen in commit log)
+**git rebase -i --root** :- modifyinging commit log
+**git rebase --abort** :- to abort rebase operation and go back to the original state of branch.
+**git fetch** :- download history for all remote tracking branches (changes we made on github)
+**git pull** :- download files and merge it with the local repo
