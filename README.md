@@ -13,7 +13,7 @@ Submit pull requests on GitHub to propose changes, discuss modifications, and me
 Collaboration
 GitHub facilitates collaboration by providing a centralized platform for code hosting, issue tracking, and documentation.
 
-Welcome to the Git Basics and GitHub Features repository! This project serves as a quick reference for beginners to learn essential Git commands and understand the basic features of Git and GitHub.
+This project serves as a quick reference for beginners to learn essential Git commands and understand the basic features of Git and GitHub.
 
 ## Table of Contents
 - [Basic Git Commands](#basic-git-commands)
